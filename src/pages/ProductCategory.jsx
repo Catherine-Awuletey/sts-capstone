@@ -18,7 +18,7 @@ const ProductCategory = () => {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
           {filteredProducts.map((product) => (
             <div key={product.id} style={{ border: "1px solid #ccc", padding: "1rem" }}>
-              <img src={product.imageUrl} alt={product.name} style={{ width: "100%", height: "200px", objectFit: "cover" }} />
+              <img src={product.imageUrl} alt={product.name} loading="lazy" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
               <h2 className="text-black font-semibold text-lg">{product.name}</h2>
               <p className="text-sm text-gray-500">{product.brand}</p>
               <p className="text-pink-600 font-bold">${product.price}</p>
