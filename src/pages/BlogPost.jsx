@@ -1,7 +1,10 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 import Construction from '../components/construction'
 
-const About = () => {
+const BlogPost = () => {
+  const { blogSlug } = useParams()
+  
   return (
     <div>
       <Construction />
@@ -9,4 +12,4 @@ const About = () => {
   )
 }
 
-export default About
+export default BlogPost

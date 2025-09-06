@@ -1,7 +1,7 @@
 import React from 'react'
 import Construction from '../components/construction'
 
-const About = () => {
+const New = () => {
   return (
     <div>
       <Construction />
@@ -9,4 +9,4 @@ const About = () => {
   )
 }
 
-export default About
+export default New
