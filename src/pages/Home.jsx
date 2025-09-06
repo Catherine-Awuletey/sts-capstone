@@ -48,7 +48,7 @@ const Home = () => {
       {/* Product List */}
       <section>
         <h2 className="text-2xl font-bold mb-4 text-black">Popular Products</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
           {productList.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
