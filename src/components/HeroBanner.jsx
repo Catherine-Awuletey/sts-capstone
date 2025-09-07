@@ -11,10 +11,10 @@ const HeroBanner = ({ title, subtitle, ctaText, ctaLink, imageUrl }) => {
 
   return (
     <div className="relative rounded-xl overflow-hidden">
-      <img src={imageUrl} alt={title} className="w-full h-64 object-cover" />
+      <img src={imageUrl} alt={title} className="w-full h-64 object-cover opacity-80" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-black text-center px-4">
         <h1 className="text-3xl font-bold">{title}</h1>
-        <p className="text-lg mt-2">{subtitle}</p>
+        <p className="text-lg mt-2 font-bold">{subtitle}</p>
         <Link to={ctaLink} className="mt-4 bg-pink-500 text-white py-2 px-4 rounded-lg hover:bg-pink-600">
           {ctaText}
         </Link>

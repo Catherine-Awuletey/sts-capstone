@@ -20,14 +20,14 @@ const Home = () => {
   } = cosmeticsLandingData;
 
   return (
-    <div className="space-y-12 p-6">
+    <div className="space-y-12 p-4 sm:p-6 lg:p-8">
       
       {/* Hero Banner */}
       <HeroBanner {...heroBanner} />
 
       {/* Featured Categories */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-black">Shop by Category</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">Shop by Category</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {featuredCategories.map((category) => (
             <CategoryCard key={category.id} {...category} />
@@ -37,7 +37,7 @@ const Home = () => {
 
       {/* Promos */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-black">Special Promotions</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">Special Promotions</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {promos.map((promo) => (
             <PromoCard key={promo.id} {...promo} />
@@ -47,8 +47,8 @@ const Home = () => {
 
       {/* Product List */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-black">Popular Products</h2>
-        <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">Popular Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {productList.map((product) => (
             <ProductCard key={product.id} {...product} />
           ))}
@@ -57,7 +57,7 @@ const Home = () => {
 
       {/* Testimonials */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-black">What Our Customers Say</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">What Our Customers Say</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
@@ -67,7 +67,7 @@ const Home = () => {
 
       {/* Blog Highlights */}
       <section>
-        <h2 className="text-2xl font-bold mb-4 text-black">From the Blog</h2>
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black text-center">From the Blog</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {blogHighlights.map((blog) => (
             <BlogCard key={blog.id} {...blog} />

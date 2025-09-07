@@ -47,13 +47,13 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link 
+            {/* <Link 
               to="/shop" 
               onClick={closeMobileMenu}
               className="px-6 py-3 hover:bg-pink-50 hover:text-pink-500 transition-colors"
             >
               Shop
-            </Link>
+            </Link> */}
             <Link 
               to="/about" 
               onClick={closeMobileMenu}

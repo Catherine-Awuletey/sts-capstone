@@ -11,23 +11,32 @@ const ProductCategory = () => {
   );
 
   return (
-    <div>
-      <h1>{categoryName} Products</h1>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 capitalize">{categoryName} Products</h1>
 
       {filteredProducts.length > 0 ? (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
-            <div key={product.id} style={{ border: "1px solid #ccc", padding: "1rem" }}>
-              <img src={product.imageUrl} alt={product.name} loading="lazy" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
-              <h2 className="text-black font-semibold text-lg">{product.name}</h2>
-              <p className="text-sm text-gray-500">{product.brand}</p>
-              <p className="text-pink-600 font-bold">${product.price}</p>
-              <p className="text-yellow-500">⭐ {product.rating}</p>
+            <div key={product.id} className="bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden">
+              <img 
+                src={product.imageUrl} 
+                alt={product.name} 
+                loading="lazy" 
+                className="w-full h-48 sm:h-56 object-cover" 
+              />
+              <div className="p-4">
+                <h2 className="text-black font-semibold text-lg mb-2 line-clamp-2">{product.name}</h2>
+                <p className="text-sm text-gray-500 mb-2">{product.brand}</p>
+                <p className="text-pink-600 font-bold text-xl mb-2">${product.price}</p>
+                <p className="text-yellow-500 text-sm">⭐ {product.rating}</p>
+              </div>
             </div>
           ))}
         </div>
       ) : (
-        <p>No products found in this category.</p>
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg">No products found in this category.</p>
+        </div>
       )}
     </div>
   );
